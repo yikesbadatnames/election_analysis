@@ -1,4 +1,5 @@
 print("Hello Word")
+print("Starting Lists Section Here ------------------------------------------------------------------")
 counties = ["Arapahoe","Denver","Jefferson"]
 
 # Add El Paso to the second position in the list. 
@@ -35,14 +36,14 @@ print(counties)
 
 # Lists and list comands
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-print("Starting Tuple Section ........")
+print("Starting Tuple Section ------------------------------------------------------------------")
 counties_tuple = ("Arapahoe","Denver","Jefferson")
 print(len(counties_tuple))
 print(counties_tuple[:-1])
 
 # Tuples
 # ^^^^^^^^^^^^^^^^^^^^^^^^
-print("Starting Dictionary Section .............")
+print("Starting Dictionary Section ------------------------------------------------------------------")
 counties_dict = {}
 counties_dict["Arapahoe"] = 422829
 counties_dict["Denver"] = 463353
@@ -56,6 +57,8 @@ print(counties_dict['Arapahoe'])
 
 #Dictionaries
 #^^^^^^^^^^^^^^^^^^^^^^^^^
+
+print("Starting List of Dictionaries ------------------------------------------------------------------")
 
 voting_data = []
 voting_data.append({"county":"Arapahoe", "registered_voters":422829})
