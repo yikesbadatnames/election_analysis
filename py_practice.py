@@ -35,3 +35,25 @@ print(counties)
 
 # Lists and list comands
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+print("Starting Tuple Section ........")
+counties_tuple = ("Arapahoe","Denver","Jefferson")
+print(len(counties_tuple))
+print(counties_tuple[:-1])
+
+# Tuples
+# ^^^^^^^^^^^^^^^^^^^^^^^^
+print("Starting Dictionary Section .............")
+counties_dict = {}
+counties_dict["Arapahoe"] = 422829
+counties_dict["Denver"] = 463353
+counties_dict["Jefferson"] = 432438
+print(counties_dict)
+print(len(counties_dict))
+print(counties_dict.items())
+print(counties_dict.values())
+print(counties_dict.get("Arapahoe"))
+print(counties_dict['Arapahoe'])
+
+
+#Dictionaries
+#^^^^^^^^^^^^^^^^^^^^^^^^^
