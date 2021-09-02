@@ -10,6 +10,10 @@ total_votes = 0
 candidate_options = []
 #create a dictionary for candidate votes
 candidate_votes = {}
+# winning candidate and winning count tracker
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
 # open the election results and read the file
 with open(file_to_load) as election_data:
     #use csv.reader to look at the csv
@@ -40,10 +44,13 @@ with open(file_to_load) as election_data:
         vote_percentage = float(votes) / float(total_votes) * 100
         #4 print the candidate name and percentage of votes
         print(f"{candidate_name}: recieved {vote_percentage}% of the vote.")
-
-#print total votes
-print(total_votes)
-#print candidate list
-print(candidate_options)
-#print candidate votes
-print(candidate_votes)
+        # determine winning vote count and candidate
+        #determine if the votes is greater than the winning count.
+        if (votes> winning_count) and (vote_percentage > winning_percentage):
+            # if true then set winning_count = votes and winning_percent
+            winning_count = votes
+            winning_percentage = vote_percentage
+            # and, set the winning_candidate equal to the candidate's name
+            winning_candidate = candidate_name
+            #print each candidate's name, vote count, and %
+            print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
