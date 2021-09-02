@@ -17,7 +17,6 @@ candidate_votes = {}
 winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
-#Setting Values-----------------------------------------------------------------------------
 # open the election results and read the file
 #Opening CSV ----------------------------------------------------------------
 with open(file_to_load) as election_data:
@@ -41,16 +40,16 @@ with open(file_to_load) as election_data:
         # add a vote to that candidates's count
         candidate_votes[candidate_name] += 1
         # saving results to our text file
-        with open(file_to_save,"w") as txt_file:
-            election_results = (
-                f"\n Election Results \n"
-                f"--------------------\n"
-                f"Total Number of Votes = {total_votes:,}\n"
-                f"--------------------\n"
-            )
-        print(election_results, end = "")
-            #saving in txt_file
-        txt_file.write(election_results)
+with open(file_to_save,"w") as txt_file:
+    election_results = (
+        f"\n Election Results \n"
+        f"--------------------\n"
+        f"Total Number of Votes = {total_votes:,}\n"
+        f"--------------------\n"
+    )
+    print(election_results, end = "")
+    #saving in txt_file
+    txt_file.write(election_results)
     #deterine the percentage of votes for each candidate by looping through candidate votes dictionary
     # 1 iterate through the canddiate list!!!!! assigning variables to keys in dictionary !!!!!
     for candidate_name in candidate_votes:
@@ -68,14 +67,17 @@ with open(file_to_load) as election_data:
             # and, set the winning_candidate equal to the candidate's name
             winning_candidate = candidate_name
             #print each candidate's name, vote count, and %
-        print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
-
+        candidate_results =(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        print(candidate_results,end="")
+        txt_file.write(candidate_results)
     #winning candidate summary ----------------------------------------------------
-   # winning_candidate_summary = (
-       # f"------------------------\n"
-       # f"Winner: {winning_candidate}\n"
-       # f"Winning Vote Count: {winning_count:,}\n"
-       # f"Winning Percentage: {winning_percentage:.1f}%\n"
-       # f"-------------------------\n"
-   # )
-   # print(winning_candidate_summary)
+#winning_candidate_summary = (
+        #f"------------------------\n"
+        #f"Winner: {winning_candidate}\n"
+        #f"Winning Vote Count: {winning_count:,}\n"
+        #f"Winning Percentage: {winning_percentage:.1f}%\n"
+        #f"-------------------------\n"
+  # )
+#print(winning_candidate_summary)
+#print(candidate_results)
+
