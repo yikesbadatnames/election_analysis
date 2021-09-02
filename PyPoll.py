@@ -1,5 +1,4 @@
-
-#Importing Depedencies (?)-------------------------------------------------------------------------------
+#Importing Depedencies(?)---------------------------------------------------------------------
 import csv
 import os
 #Command line -------------------------------------------------------------------------------
@@ -7,7 +6,7 @@ import os
 file_to_load = os.path.join("resources","election_results.csv")
 #assign a variable to save the file to a path
 file_to_save = os.path.join("analysis","election_analysis.txt")
-#Setting Values-------------------------------------------------------------------------------
+#Setting Values------------------------------------------------------------------------------
 # set total_votes to 0 before opening file
 total_votes = 0
 # set candidate options to 0 before opening the file
@@ -18,7 +17,7 @@ candidate_votes = {}
 winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
-#Setting Values-------------------------------------------------------------------------------
+#Setting Values-----------------------------------------------------------------------------
 # open the election results and read the file
 #Opening CSV ----------------------------------------------------------------
 with open(file_to_load) as election_data:
@@ -41,7 +40,7 @@ with open(file_to_load) as election_data:
             candidate_votes[candidate_name] = 0
         # add a vote to that candidates's count
         candidate_votes[candidate_name] += 1
-    #deterine the percentage of votes for each candidate by looping through candidate vvotes dictionary
+    #deterine the percentage of votes for each candidate by looping through candidate votes dictionary
     # 1 iterate through the canddiate list!!!!! assigning variables to keys in dictionary !!!!!
     for candidate_name in candidate_votes:
         #2 retrieve vote count of a candidate into dictonairy
