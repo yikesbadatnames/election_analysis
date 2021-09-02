@@ -8,6 +8,8 @@ file_to_save = os.path.join("analysis","election_analysis.txt")
 total_votes = 0
 # set candidate options to 0 before opening the file
 candidate_options = []
+#create a dictionary for candidate votes
+candidate_votes = {}
 # open the election results and read the file
 with open(file_to_load) as election_data:
     #use csv.reader to look at the csv
@@ -23,10 +25,16 @@ with open(file_to_load) as election_data:
         candidate_name = row[2]
         # if candidate name isn't already in candidate options...
         if candidate_name not in candidate_options:
-        # add the candidate name to the candidate list 
+            # add the candidate name to the candidate list 
             candidate_options.append(candidate_name)
+            # begin tracking that candidate's vote count.
+            candidate_votes[candidate_name] = 0
+            # add a vote to that candidates's count
+        candidate_votes[candidate_name] += 1
 
 #print total votes
 print(total_votes)
 #print candidate list
 print(candidate_options)
+#print candidate votes
+print(candidate_votes)
