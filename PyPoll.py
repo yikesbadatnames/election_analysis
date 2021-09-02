@@ -40,6 +40,17 @@ with open(file_to_load) as election_data:
             candidate_votes[candidate_name] = 0
         # add a vote to that candidates's count
         candidate_votes[candidate_name] += 1
+        # saving results to our text file
+        with open(file_to_save,"w") as txt_file:
+            election_results = (
+                f"\n Election Results \n"
+                f"--------------------\n"
+                f"Total Number of Votes = {total_votes:,}\n"
+                f"--------------------\n"
+            )
+        print(election_results, end = "")
+            #saving in txt_file
+        txt_file.write(election_results)
     #deterine the percentage of votes for each candidate by looping through candidate votes dictionary
     # 1 iterate through the canddiate list!!!!! assigning variables to keys in dictionary !!!!!
     for candidate_name in candidate_votes:
@@ -60,11 +71,11 @@ with open(file_to_load) as election_data:
         print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
     #winning candidate summary ----------------------------------------------------
-    winning_candidate_summary = (
-        f"------------------------\n"
-        f"Winner: {winning_candidate}\n"
-        f"Winning Vote Count: {winning_count:,}\n"
-        f"Winning Percentage: {winning_percentage:.1f}%\n"
-        f"-------------------------\n"
-    )
-    print(winning_candidate_summary)
+   # winning_candidate_summary = (
+       # f"------------------------\n"
+       # f"Winner: {winning_candidate}\n"
+       # f"Winning Vote Count: {winning_count:,}\n"
+       # f"Winning Percentage: {winning_percentage:.1f}%\n"
+       # f"-------------------------\n"
+   # )
+   # print(winning_candidate_summary)
