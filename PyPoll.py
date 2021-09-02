@@ -11,13 +11,11 @@ with open(file_to_load) as election_data:
 election_data.close()
 #creat a file name variable to a direct or indirect path to the file
 file_to_save = os.path.join("analysis","election_analysis.txt")
-#using the open() function with the "w" mode we will write the data
-#to the file
-outfile = open(file_to_save,"w")
+#using the with statement open the file as a text file
+with open(file_to_save,"w") as txt_file:
 #write some data to the file
-outfile.write("Mom's yer Dad 2")
+    txt_file.write("Mom's yer Dad 45")
 #close the file
-
 
    
 # close the file
