@@ -31,6 +31,15 @@ with open(file_to_load) as election_data:
             candidate_votes[candidate_name] = 0
             # add a vote to that candidates's count
         candidate_votes[candidate_name] += 1
+    #deterine the percentage of botes for each candidate by looping through candidate vvotes dictionary
+    # 1 iterate through the canddiate list
+    for candidate_name in candidate_votes:
+        #2 retrieve vote count of a candidate
+        votes = candidate_votes[candidate_name]
+        #3 calculate the percentage of votes
+        vote_percentage = float(votes) / float(total_votes) * 100
+        #4 print the candidate name and percentage of votes
+        print(f"{candidate_name}: recieved {vote_percentage}% of the vote.")
 
 #print total votes
 print(total_votes)
