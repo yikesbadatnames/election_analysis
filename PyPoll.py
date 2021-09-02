@@ -14,8 +14,4 @@ file_to_save = os.path.join("analysis","election_analysis.txt")
 #using the with statement open the file as a text file
 with open(file_to_save,"w") as txt_file:
 #write some data to the file
-    txt_file.write("Mom's yer Dad 45")
-#close the file
-
-   
-# close the file
+    txt_file.write("Araphaoe\nDenver\nJefferson")
