@@ -29,7 +29,7 @@ with open(file_to_load) as election_data:
     for row in file_reader:
         # add a vote for each colmn
         total_votes = total_votes +1
-            #print the candidate name for each row
+            #print the candidate name for each row !!! new variable
         candidate_name = row[2]
         # if candidate name isn't already in candidate options...
         if candidate_name not in candidate_options:
@@ -38,7 +38,7 @@ with open(file_to_load) as election_data:
             # begin tracking that candidate's vote count. add to dict
             candidate_votes[candidate_name] = 0
         # add a vote to that candidates's count
-        candidate_votes[candidate_name] += 1
+        candidate_votes[candidate_name] += 1 
         # saving results to our text file
 with open(file_to_save,"w") as txt_file:
     election_results = (
@@ -71,13 +71,14 @@ with open(file_to_save,"w") as txt_file:
         print(candidate_results,end="")
         txt_file.write(candidate_results)
     #winning candidate summary ----------------------------------------------------
-        winning_candidate_summary = (
+winning_candidate_summary = (
             f"------------------------\n"
             f"Winner: {winning_candidate}\n"
             f"Winning Vote Count: {winning_count:,}\n"
             f"Winning Percentage: {winning_percentage:.1f}%\n"
             f"-------------------------\n"
         )
-        print(winning_candidate_summary)
-        txt_file.write(winning_candidate_summary)
+with open(file_to_save,"w") as txt_file:
+    print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
 
