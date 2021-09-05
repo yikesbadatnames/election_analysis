@@ -38,7 +38,7 @@ Secondary goals included auditing the registered voters in each county, as well 
 * <p> Charles Casper Stockham came in 2nd with 85,213 votes, making up 23.0% of the votes.</p>
 * <p> And the winner... by a extremely the extremely wide margin with 272,892, making up 73.8% of the votes... is ... DIANA DEGETTE!!! </p>
 
-> <p> Evidence for these findings in the code can be found below
+> <p> Evidence for these findings in the code can be found below </p>
 
 <br>
 
