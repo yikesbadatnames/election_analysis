@@ -40,6 +40,7 @@ Secondary goals included auditing the registered voters in each county, as well 
 
 > <p> Evidence for these findings in the code can be found below </p>
 
+
 <br>
 
 ![candidate_code](/images/candidate_breakdown_code.png)
